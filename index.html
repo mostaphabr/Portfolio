@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./files/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+
+    <section>
+        <nav>
+            <i class="fa-solid fa-bars-staggered fa-2xl navicon" style="display: none;"  id="navicon"></i>
+        </nav>
+        <!-- NAV -->
+        <div class="section1 nav" > 
+
+            <div class="header">
+                <div  class="intro">
+                    <img src="./files/avatar1.jpg" alt="">
+                    <h1>mustapha</h1><h1 style="margin-bottom: 42px;">boutrhaline</h1 >
+                    <div id="h4">
+                        <h4>full stack developer</h4>
+                    </div>
+                    <p id="output"></p>
+                </div>
+
+            <div  class="navlinks">
+                <ul>
+                    <li class="link"><a id="about" onmouseenter="popup('description')" onmouseleave="popupend('description')" >about</a></li>      
+                    <li class="link"><a href="#skills"  id="skills" title="click to switch   " onmouseenter="popup('card')" onmouseleave="popupend('card')">skills</a></li>
+                    <li class="link"> <a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            </div>
+          <div  class="media">
+                <ul class="medialinks">
+                    <li> <a href=""> <i class="fa-brands fa-instagram fa-2xl"></i> </a></li>
+                    <li> <a href=""> <i class="fa-brands fa-linkedin fa-2xl"></i></a> </li>
+                    <li> <a href=""> <i class="fa-brands fa-github fa-2xl"></i></a>                </li>
+                    <li> <a href=""> <i class="fa-solid fa-envelope-open-text fa-2xl"></i>  </a> </li>
+                </ul>
+            </div>
+
+            
+        </div>
+        <!-- NAV END -->
+
+        <!-- INFO  -->
+        <div class="section2 info" >
+            <div class="description"  id="description">
+                <p>My name is Mustapha, and I am a full-stack developer , with +2 years of experience in the field. I have a passion for technology and an insatiable desire to learn and grow as a developer. Throughout my career, I have worked on a variety of projects, My expertise includes six Websites Development Tools and languages , and I am always seeking new challenges that allow me to utilize my skills and push my limits . 
+                </p>
+                <br>
+                <hr style="color:whitesmoke;">
+            </div>
+
+           
+            <div class="cards" id="skills">
+
+                
+                <div class="card  card1"  >
+                <h5>senior in   <span>Javascript</span></h5>
+                <h5 class="level">level : 70%</h5>
+                <br>
+                    <p>  JavaScript is a dynamic programming language that's used for web development, in web applications, for game development, and lots more</p>
+                </div>
+                <div class="card card2" data-aos-duration="1000" >
+                    <h5>junior in   <span>CSS</span></h5>
+                    <h5 class="level">level : 95%</h5>
+
+                    <br>
+                    <p>CSS (Cascading Style Sheets) is used to style and layout web pages for example, to alter the font, color, size ...                    </p>
+                </div>
+                <div class="card card3" >
+                    <h5>junior in   <span>Bootstrap</span></h5>
+                    <h5 class="level">level : 95%</h5>
+
+                    <p>
+                        Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites.                    </p>
+                </div>
+                <div class="card card4">
+                    <h5>junior in   <span>mySql</span></h5>
+                    <h5 class="level">level : 85%</h5>
+
+                    <p>
+                        MySQL is an Oracle-backed open source relational database management system (RDBMS) based on Structured Query Language (SQL).                    </p>
+                </div>
+                <div class="card card5" >
+                    <h5>middle in   <span>django</span></h5>
+                    <h5 class="level">level : 80%</h5>
+                    <p>
+                        Django is a high-level Python web (backend) framework that enables rapid development of secure and maintainable websites                    </p>
+                </div>
+            </div>
+            <div class="projects" id="projects">
+                
+                    <h1 id="output_p"></h1>
+               
+            </div>
+        </div>
+        <!-- INFO END -->
+
+
+            
+    
+    <script src="./files/script.js"></script>
+  
+
+</body>
+</html>
