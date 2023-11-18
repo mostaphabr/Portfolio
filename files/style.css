@@ -330,6 +330,9 @@ h4,#output_p{
     width:min-content;
     line-height: 2.2rem;
 }
+#welcome {
+    height: 100px ;
+}
 
 .intro h1{
  display: flex;
