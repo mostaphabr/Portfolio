@@ -328,6 +328,8 @@ h4,#output_p{
     flex-direction: column;
     justify-content: space-around;
     padding: 0 15px ;
+    padding-top: 20px;
+
 }
 .fix ul li a{
     margin:0 ;
