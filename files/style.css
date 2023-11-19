@@ -248,7 +248,9 @@ transform: scale(1.2);
 .shown{
     right: 0% !important;
 }
-
+#up{
+    display: none;
+}
 
 
 
@@ -329,7 +331,6 @@ h4,#output_p{
     justify-content: space-around;
     padding: 0 15px ;
     padding-top: 20px;
-
 }
 .fix ul li a{
     margin:0 ;
@@ -347,5 +348,12 @@ h4,#output_p{
 .hide{
     right: -50%;
 }
+#up{
+    display: inline-block !important;
+    border: none !important;
+
+}
+
+
 
 }
