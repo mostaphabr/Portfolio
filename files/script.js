@@ -93,31 +93,19 @@ function card_position(c){
     
   
 }
-window.addEventListener('resize' , function(){
-    if (window.innerWidth >=1000 ){
-        document.querySelector('.navlinks').classList.remove('fix')
-        document.getElementById('navicon').classList.remove('navicon')
-
-
-
-    
-    }
-    
-})
-window.addEventListener('scroll' ,()=>{
-    if (window.innerWidth <=1000 ){
-            document.querySelector('.navlinks').classList.add('fix')
-            document.getElementById('navicon').classList.add('navicon')
-            document.querySelector('.navlinks').classList.add('hide')
-
-           
-    }
-  
-})
-
 
 document.getElementById('navicon').addEventListener('click' ,()=>{
     document.querySelector('.navlinks').classList.toggle('shown')
+    let icon = document.getElementById('navicon')
+
+    if(icon.classList.contains('fa-xmark')){
+        icon.classList.remove('fa-xmark')
+        icon.classList.add('fa-bars-staggered')
+    }else{
+        icon.classList.add('fa-xmark')
+        icon.classList.remove('fa-bars-staggered')
+    }
+
 })
 
 
