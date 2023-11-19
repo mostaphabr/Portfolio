@@ -113,6 +113,8 @@ document.querySelectorAll('.link').forEach((element)=>{
     element.addEventListener('click' , ()=>{
        
         document.querySelector('.navlinks').classList.remove('shown')
+        icon.classList.remove('fa-xmark')
+        icon.classList.add('fa-bars-staggered')
 
 
     })
