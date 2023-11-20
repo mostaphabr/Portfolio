@@ -108,7 +108,7 @@ document.getElementById('navicon').addEventListener('click' ,()=>{
 
 })
 
-document.getElementById('up').addEventListener("click" , ()=>{window.scrollTo({ top : 0 , behavior : "smooth"}) ; console.log("rrr");} ) 
+document.getElementById('up').addEventListener("click" , ()=>{window.scrollTo({ top : 0 , behavior : "smooth"})}); 
 document.querySelectorAll('.link').forEach((element)=>{
     element.addEventListener('click' , ()=>{
        
