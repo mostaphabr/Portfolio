@@ -93,7 +93,8 @@ function card_position(c){
     
   
 }
-
+// Responsive
+let icon = document.getElementById('navicon')
 document.getElementById('navicon').addEventListener('click' ,()=>{
     document.querySelector('.navlinks').classList.toggle('shown')
     let icon = document.getElementById('navicon')
