@@ -3,36 +3,36 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: 0.4s;
     line-height: 1.5rem;
     
 }
+
+
 body{
-    background-color: #0f172a ;
+    background-color: #0f172a  !important;
     color: white;
     height: 100vh;
     width: 100%;
-    padding: 100px 90px;
+    padding: 50px 30px;
     scroll-behavior: unset;
-
-    font-family:'Poppins' , 'Arial';
+    font-family:'Poppins' , 'Arial' !important;
     scroll-behavior: smooth;
 
 }
 section{
     position: relative;
     display: flex;
-    min-height: 100vh;
+    max-height:max-content;
     width: 100%;
     
 
 }
 .section1{
-    justify-content: space-between;
+    justify-content: center;
     width: 40%;
-    min-height: 80vh;
-    padding: 50px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -51,19 +51,24 @@ section{
     align-items: center;
     height: 100%;
 }
-img{
+
+.intro img{
     border-radius: 50%;
     border: 2px solid white;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 20px;
 }
-img:hover{
+.intro img:hover{
     transform: scale(1.08);
 }
+#welcome {
+    max-height: 100px ;
+}
+
 ul{
-    padding:0  40px ;
-    list-style-type: none;
+    padding: 0  40px ;
+    list-style-type: none ;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -75,14 +80,16 @@ ul{
     position: relative;
 }
 .header ul li a{
-    margin-right : 44px ;
+   
     cursor: pointer;
     font-size: 19px;
-    color: white;
+    color: white !important;
     letter-spacing: 1px;
     transition: 0.3s;
-    border-left: 2px solid gold;
+    border-left: 2px solid gold ;
     padding-left: 5px;
+    margin-right:40px;
+
 
 }
 .header ul li a:hover{
@@ -120,7 +127,8 @@ h1,h4{
     margin-bottom: 12px;
 }
 h1{
-    font-size: 34px;
+    font-size: 34px !important;
+    font-weight: 700 !important;
 }
 h4{
   
@@ -166,19 +174,26 @@ transform: scale(1.2);
     word-spacing: 2px;
     padding: 0 80px;
 }
-.description{
-    padding: 20px;
-    font-size: 19px;
+.Description{ 
+    padding: 20px !important;
     margin-bottom: 5.6rem;
     transition: 0.4s;
-   
 
+    
 }
+.Description p {
+    padding-bottom: 20px;
+    border-bottom: 2px solid whitesmoke;
+    font-size: 19px !important; 
+}
+
+/* Cards style */
 .cards{
     display: flex;
     flex-direction: column;
     grid-gap: 30px;
-    align-items:first baseline;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 80px;
 
 }
@@ -190,8 +205,11 @@ transform: scale(1.2);
     width:80%;
     transition: 0.4s;
     cursor: pointer;
-   
+    background-color: #0f172a  !important;
     color: #899bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   
 
 }
@@ -201,45 +219,62 @@ transform: scale(1.2);
     color: rgb(255, 255, 255);
  
 }
-.cards .card h5{
-  font-size: 19px;
-  font-weight: 500;
-  letter-spacing: 2.3px;
-  text-transform: capitalize;
-  color: aqua;
-  width: fit-content;
-  margin-bottom: 4px;
-
+.cardHead,.cardFooter{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+   
 }
-.cards .card span{
-   color: gold;
-  }
-.level{
-    color: aquamarine !important;
+.cardHead .Title{
+    color: gold;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight:500;
 }
-  
-
-.cards .card h5:hover{
-    color:aqua;
-    border-bottom: 1px solid aqua;
-  
-} .popup{
-    color: white !important;
-    transform: scale(1.03);
-    padding: 20px;
-    background-color: #182a4a;
-    border-color: white !important;
+.cardBody{
+    height: 60%;
+}
+.cardHead{
+    justify-content: space-between;
+}
+.cardFooter{
+    justify-content: end;
+}
+.cardFooter a {
+    padding: 0px 6px;
+    text-decoration: none;
+    color: white;
     
 }
 
-.projects{
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    height:30vh;
-    width: 100%;
+
+.cardHead img{
+    width: 45px;
+    height: 45px;
+    color: white;
+    border-radius: 3px;
+
+}
+/* Cards style */
+
+
+.popup{
+    color: white !important;
+    transform: scale(1.03);
+    padding: 20px;
+    background-color: #182a4a !important;
+    border-color: white !important;
+    box-shadow: 2px 2px  10px rgb(14, 123, 156);
+   
 }
 
+.skills{
+    padding: 30px 20px;
+    height:max-content;
+    width: 100%;
+    margin-bottom: 5rem;
+}
 .intro h1{
   
    color: rgb(237, 144, 144);
@@ -251,14 +286,57 @@ transform: scale(1.2);
 #up{
     display: none;
 }
+.Tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    list-style: none;
+}
 
+.Tooltip .Tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    word-spacing: normal;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    border-top-left-radius: 20px;
+    padding: 5px;
+    font-size: 13px;
+    position: absolute;
+    z-index: 1;
+    top: 125%; 
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: color 4s ;
+   
+}
 
+.Tooltip:hover .Tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
 
+@keyframes color{
+    10%{background-color: goldenrod;}
+    20%{background-color: black;}
+    30%{background-color: goldenrod;}
+    40%{background-color: black;}
+    50%{background-color: goldenrod;}
+    60%{background-color: black;}
+    70%{background-color: goldenrod;}
+    80%{background-color: black;}
+    90%{background-color: goldenrod;}
+    100%{background-color: black;}
 
+}
 
-@media screen and (max-width : 1242px){
+@media screen and (max-width : 1342px){
     body{
-        padding-right: 30px;
+        padding-right: 0px;
     }
     .section2{
         padding-right: 0;
@@ -278,10 +356,12 @@ section{
     flex-direction: column !important;
 }
 .section1{
-   position: relative;
-    width: 100%;
+    position: relative;
+    width: 100% !important;
     min-height: 80vh;
     justify-content: center;
+    padding: 0;
+   
 }
 
 .section2{
@@ -297,9 +377,6 @@ section{
 h4,#output_p{
     width:min-content;
     line-height: 2.2rem;
-}
-#welcome {
-    height: 100px ;
 }
 
 .intro h1{
@@ -344,6 +421,7 @@ h4,#output_p{
     display: block !important;
     z-index: 3;
     cursor: pointer;
+    color: white;
 }
 .hide{
     right: -50%;
@@ -353,7 +431,9 @@ h4,#output_p{
     border: none !important;
 
 }
-
+.Tooltiptext{
+    display: none;
+}
 
 
 }
