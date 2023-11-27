@@ -221,7 +221,7 @@ transform: scale(1.2);
 }
 .cardHead,.cardFooter{
     display: flex;
-    align-items: center;
+    
     width: 100%;
     height: fit-content;
    
@@ -423,8 +423,8 @@ h4,#output_p{
 
 .navicon{
     position: fixed;
-    right:5%;
-    top: 5%;
+    right:7%;
+    top: 8%;
     display: block !important;
     z-index: 3;
     cursor: pointer;
