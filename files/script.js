@@ -1,21 +1,18 @@
 
 const sentence = "Welcome to my Portfolio";
-const project_sentense =" Projects comming soon"
 const outputElement = document.getElementById("output");
-const output_p = document.getElementById("output_p");
 let index = 0;
 
 function writeLetterByLetter() {
   if (index < sentence.length) {
     outputElement.textContent += sentence.charAt(index);
-    output_p.textContent += project_sentense.charAt(index);
     index++;
     setTimeout(writeLetterByLetter, 130);
   }
  else {
     setTimeout(() => {
         outputElement.textContent = "";
-        output_p.textContent = "";
+       
       index = 0;
       writeLetterByLetter();
     }, 2000); 
@@ -24,10 +21,10 @@ function writeLetterByLetter() {
 writeLetterByLetter();
 
 let about = document.getElementById('about')
-let description = document.getElementById('description')
+let Description = document.getElementById('Description')
 about.addEventListener('click' ,()=>{
-    description.scrollIntoView({
-        block : "end" , 
+    Description.scrollIntoView({
+        block : "center" , 
         behavior :"smooth"
        })     
   
@@ -59,10 +56,10 @@ function popupend(para){
     }    
 
 // (cards Hover)
-document.getElementById('skills').addEventListener('click' ,hover )
+document.getElementById('Projects').addEventListener('click' ,hover )
 let i = 1
 function hover(){
-    if(i <= 5)
+    if(i <= 4)
     {
         card_position(i)
         document.querySelector(`.card${i}`).classList.add('popup')
@@ -70,7 +67,7 @@ function hover(){
         document.querySelector(`.card${i-1}`).classList.remove('popup')
         }
         if(i==1){
-        document.querySelector(`.card5`).classList.remove('popup')
+        document.querySelector(`.card4`).classList.remove('popup')
             
         }
         i++
@@ -80,7 +77,18 @@ function hover(){
     }
 
 }
+let skillslink =document.getElementById('skillslink')
+skillslink.addEventListener('click' , ()=>{document.getElementById('skills').scrollIntoView({block :'center' , behavior :'smooth'})} )
+
 // END  (cards Hover)
+
+colors = ['gold' , 'aqua' ,  , 'orange' , 'rgb(00, 173, 235)' ]
+let c = 0
+document.querySelectorAll('.Title').forEach(
+    element=>
+    {
+         ;element.style.color = colors[i] ; i++
+    }) 
 
 
 
@@ -93,11 +101,11 @@ function card_position(c){
     
   
 }
-// Responsive
+// Responsive NAV
 let icon = document.getElementById('navicon')
 document.getElementById('navicon').addEventListener('click' ,()=>{
     document.querySelector('.navlinks').classList.toggle('shown')
-    let icon = document.getElementById('navicon')
+   
 
     if(icon.classList.contains('fa-xmark')){
         icon.classList.remove('fa-xmark')
@@ -109,13 +117,15 @@ document.getElementById('navicon').addEventListener('click' ,()=>{
 
 })
 
-document.getElementById('up').addEventListener("click" , ()=>{window.scrollTo({ top : 0 , behavior : "smooth"})}); 
+document.getElementById('up').addEventListener("click" , ()=>{window.scrollTo({ top : 0 , behavior : "smooth"})} ); 
 document.querySelectorAll('.link').forEach((element)=>{
     element.addEventListener('click' , ()=>{
        
         document.querySelector('.navlinks').classList.remove('shown')
         icon.classList.remove('fa-xmark')
         icon.classList.add('fa-bars-staggered')
+
+
 
 
     })
