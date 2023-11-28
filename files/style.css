@@ -390,6 +390,10 @@
     .cards{
     align-items: center;
     }
+        .cards .card{
+            width:90% ; 
+        }
+            
 
 
     .fix{
