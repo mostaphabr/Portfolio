@@ -24,7 +24,7 @@
         display: flex;
         max-height:max-content;
         width: 100%;
-        
+        overflow: hidden;        
 
     }
     .section1{
