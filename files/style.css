@@ -207,7 +207,6 @@
       
       #button-content {
         position: relative;
-        z-index: 1;
         font-size: 17px;
         text-transform: capitalize;
         letter-spacing: 2px;
