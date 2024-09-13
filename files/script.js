@@ -130,3 +130,15 @@ document.querySelectorAll('.link').forEach((element)=>{
 
     })
 })
+
+
+// Prevent triggering the modal
+
+document.querySelectorAll(".myLink").forEach(element => {
+   element.addEventListener("click", function(event) {
+        event.stopPropagation();  
+      });
+});
+
+
+// Prevent triggering the modal
