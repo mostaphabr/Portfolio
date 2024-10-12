@@ -9,7 +9,20 @@
         
     }
 
-
+    abbr {
+        position: relative;
+        }
+        
+        abbr:hover::after {
+        position: absolute;
+        bottom: 100%;
+        left: 80%;
+        display: block;
+        padding: 0.6em;
+        border-radius: 8px;
+        background: whitesmoke;
+        content: attr(title);
+        }
     body{
         background-color: #0f172a  !important;
         color: white;
@@ -510,7 +523,6 @@
         position: fixed;
         right: 5%;
         bottom: 5%;
-        z-index: 500;
 
     }
     .Tooltiptext{
