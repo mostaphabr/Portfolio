@@ -154,10 +154,10 @@ function stars() {
     document.body.appendChild(e);
     
     if (screen.width >= 1000) {
-        e.style.left = Math.random() * +(innerWidth-100) + "px";
+        e.style.left = Math.random() * (innerWidth-100) + "px";
  
     }else{
-        e.style.left = Math.random() * +innerWidth + "px";
+        e.style.left = Math.random() * innerWidth + "px";
 
     }
     e.style.fontSize = 12 + size + "px";
