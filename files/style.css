@@ -6,6 +6,7 @@
         text-decoration: none !important;
         transition: 0.4s;
         line-height: 1.5rem;
+       
         
     }
 
@@ -194,6 +195,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       
 
         
     }
@@ -202,6 +204,7 @@
         margin-bottom: 30px;
         border-bottom: 2px solid whitesmoke;
         font-size: 19px !important; 
+       
     }
     #button {
         position: relative;
@@ -539,3 +542,50 @@
 
 
     }
+
+
+
+
+
+
+
+
+
+
+    .star {
+        position: absolute;
+        top: -20px;
+        color: #ffffff; /* White for clarity */
+        animation: animate 5s linear forwards;
+        z-index: -1;
+    }
+    
+    .star::before {
+        content: "\f121"; /* FontAwesome icon for code */
+        font-family: fontAwesome;
+        text-shadow: 
+            0 0 5px #00bcd4,   /* Light cyan glow */
+            0 0 15px #00796b,  /* Darker teal for depth */
+            0 0 30px #004d40,  /* Even darker teal */
+            0 0 40px rgba(0, 188, 212, 0.5); /* Optional softer glow */
+            z-index: -1;
+
+    }
+    
+      
+      @keyframes animate {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+      
+        80% {
+          opacity: 1;
+        }
+      
+        100% {
+          transform: translateY(80vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+      
