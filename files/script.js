@@ -152,8 +152,14 @@ function stars() {
   
     e.setAttribute("class", "star");
     document.body.appendChild(e);
-  
-    e.style.left = Math.random() * +(innerWidth-100) + "px";
+    
+    if (screen.width >= 1000) {
+        e.style.left = Math.random() * +(innerWidth-100) + "px";
+ 
+    }else{
+        e.style.left = Math.random() * +innerWidth + "px";
+
+    }
     e.style.fontSize = 12 + size + "px";
     e.style.animationDuration = 4 + duration + "s";
   
