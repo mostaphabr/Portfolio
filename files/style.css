@@ -32,6 +32,7 @@
         font-family:'Poppins' , 'Arial' !important;
         scroll-behavior: smooth;
         cursor: url("./Pimgs/cursor.png") , auto;
+  overflow: hidden;
 
     }
     section{
