@@ -32,7 +32,6 @@
         font-family:'Poppins' , 'Arial' !important;
         scroll-behavior: smooth;
         cursor: url("./Pimgs/cursor.png") , auto;
-  overflow: hidden;
 
     }
     section{
@@ -40,6 +39,8 @@
         display: flex;
         max-height:max-content;
         width: 100%;
+     
+
        
 
     }
@@ -562,13 +563,13 @@
     }
     
     .star::before {
-        content: "\f121"; /* FontAwesome icon for code */
+        content: "\f2dc"; /* FontAwesome icon for code */
         font-family: fontAwesome;
         text-shadow: 
-            0 0 5px #00bcd4,   /* Light cyan glow */
-            0 0 15px #00796b,  /* Darker teal for depth */
-            0 0 30px #004d40,  /* Even darker teal */
-            0 0 40px rgba(0, 188, 212, 0.5); /* Optional softer glow */
+        0 0 7px #00bcd4, 
+        0 0 20px #00796b,
+        0 0 35px #004d40,
+        0 0 50px rgba(0, 188, 212, 0.5);
             z-index: -1;
 
     }
