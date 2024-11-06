@@ -157,7 +157,7 @@ function stars() {
         e.style.left = Math.random() * (innerWidth-100) + "px";
  
     }else{
-        e.style.left = Math.random() * (innerWidth - 40) + "px";
+        e.style.left = Math.random() * (innerWidth - 40 ) + 40  + "px";
 
     }
     e.style.fontSize = 12 + size + "px";
