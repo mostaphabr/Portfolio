@@ -17,7 +17,7 @@
         abbr:hover::after {
         position: absolute;
         bottom: 100%;
-        left: 80%;
+        right: 0%;
         display: block;
         padding: 0.6em;
         border-radius: 8px;
