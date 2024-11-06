@@ -573,6 +573,35 @@
             z-index: -1;
 
     }
+
+    /* Scrollbar Track */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust width for desktop */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e0f7fa; /* Light icy blue */
+    border-radius: 10px; /* Rounded edges for a softer look */
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #00bcd4; /* Cyan that matches the snow icon */
+    border-radius: 10px;
+    border: 3px solid #e0f7fa; /* Creates a frosted border */
+    box-shadow: 
+        0 0 5px #00bcd4,        /* Light glow */
+        0 0 10px rgba(0, 188, 212, 0.3); /* Softer, extended glow */
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #00796b; /* Darker teal for hover */
+    box-shadow: 
+        0 0 8px #00796b,
+        0 0 12px rgba(0, 188, 212, 0.5); /* Slightly stronger glow */
+}
+
     
       
       @keyframes animate {
