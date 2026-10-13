@@ -1,376 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./files/logo.png">
-    <link rel="stylesheet" href="./files/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustapha Boutrhaline — Full Stack Developer</title>
+  <meta name="description" content="Mustapha Boutrhaline — Junior Full Stack Web Developer (React, Laravel, Django) based in Khemisset, Morocco. Websites, AI chatbots and automation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="files/style.min.css">
+  <link rel="shortcut icon" href="files/favicon.svg" type="image/x-icon">
+ 
 </head>
+<body>
 
-    <!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/682c21c2de0d8619101f2619/1irm67oo0';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-<body >
+  <!-- ================= NAV ================= -->
+  <nav class="nav" aria-label="Main">
+    <a href="#home" data-label="Home" class="active" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+    </a>
+    <a href="#projects" data-label="Projects" aria-label="Projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+    </a>
+    <a href="#experience" data-label="Experience" aria-label="Experience">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+    </a>
+    <a href="#tools" data-label="Stack" aria-label="Tech stack">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+    </a>
+    <a href="#services" data-label="Services" aria-label="Services">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8H20l-4.9 3.6 1.9 5.8-5-3.6-5 3.6 1.9-5.8L4 8.8h6.1z"/></svg>
+    </a>
+    <a href="#contact" data-label="Contact" aria-label="Contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+    </a>
+  </nav>
 
-    <section>
-        <nav>
-            <i class="fa-solid fa-bars-staggered fa-2xl navicon " style="display: none;"  id="navicon" class="navicon" ></i>
-        </nav>
-        <!-- NAV -->
-        <div class="section1 nav" > 
+  <div class="wrap">
 
-            <div class="header">
-                <div  class="intro">
-                    <img src="./files/logo.png" alt="image" id="img">
-                    <h1>mostapha</h1><h1 style="margin-bottom: 42px;">boutrhaline</h1 >
-                    <div id="h4">
-                        <h4>full stack developer</h4>
-                    </div>
-                    <div id="welcome">
-                        <p id="output"></p>
-                    </div>
-                </div>
+    <!-- ================= PROFILE CARD ================= -->
+    <aside class="profile">
+      <div class="avatar">
+        <!-- Keep your photo in the SAME folder as this index.html -->
+        <img src="files/logo.jpg" alt="Mustapha Boutrhaline"
+             onerror="this.outerHTML='<span class=&quot;initials&quot;>MB</span>'">
+        <div class="dash"></div>
+      </div>
+      <h2>Mustapha<br>Boutrhaline</h2>
+      <p class="tag">Full stack web developer building modern web apps &amp; AI-powered automations.</p>
+      <span class="loc"><i></i>Khemisset, Morocco · Open to work</span>
+      <div class="socials">
+        <a href="https://github.com/mostaphabr" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mostapha-web-developer" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <a href="https://wa.me/212623593057" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37a9.8 9.8 0 0 1-1.5-5.23c0-5.42 4.41-9.83 9.84-9.83a9.77 9.77 0 0 1 9.83 9.84c0 5.42-4.41 9.83-9.84 9.83Zm8.37-18.2A11.76 11.76 0 0 0 12.05 0C5.5 0 .17 5.33.16 11.88c0 2.1.55 4.14 1.59 5.94L.06 24l6.3-1.65a11.87 11.87 0 0 0 5.68 1.45h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.24-6.16-3.5-8.4Z"/></svg>
+        </a>
+        <a href="mailto:mustapha8contact@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+      </div>
+    </aside>
 
+    <!-- ================= MAIN ================= -->
+    <main>
 
-            <div  class="navlinks fix hide">
-                <ul>
-                    <li class="link"><a  id="about" onmouseenter="popup('Description')" onmouseleave="popupend('Description')" >Profile</a></li>  
-                    <li class="link"> <a id="skillslink" onmouseenter="popup('skills')" onmouseleave="popupend('skills')">Skills</a></li>    
-                    <li class="link"><a  id="Projects" class="Tooltip" onmouseenter="popup('card')" onmouseleave="popupend('card')" >Projects <div class="Tooltiptext">click to switch between projects </div> </a></li>
-                    
-                </ul>
-            </div>
+      <!-- HERO -->
+      <section id="home">
+        <h1 class="big reveal">Full Stack<span>Developer</span></h1>
+        <p class="lead reveal">I’m a full stack developer with an OFPPT diploma in Digital Development and hands-on freelance experience with international clients. I work across the whole stack, using React on the front end and Laravel or Django on the back end, with a strong interest in AI integration and workflow automation. I’m looking to join a team where I can ship meaningful products and keep growing.</p>
 
-            </div>
-          <div  class="media">
-                <ul class="medialinks">
-                    <li> <a href="https://www.linkedin.com/in/mostapha-web-developer/" target="_blank"> <i class="fa-brands fa-linkedin fa-2xl"></i></a> </li>
-                    <li> <a href="https://github.com/mostaphabr" target="_blank"> <i class="fa-brands fa-github fa-2xl"></i></a></li>
-                    <li> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mustapha8contact@gmail.com" target="_blank"> <i class="fa-solid fa-envelope-open-text fa-2xl"></i>  </a> </li>
-                </ul>
-            </div>
-
-            
-        </div>
-        <!-- NAV END -->
-
-        <!-- INFO  -->
-        <div class="section2 info" >
-          <h2 class="text-center mb-5 fs-4 w-100 text-secondary   font-wheight-light" >Profile</h2>
-
-            <div class="Description"  id="Description">
-                <p>
-                  As a skilled full stack developer, I bring expertise in PHP, Laravel, React,HTML, CSS, Bootstrap, WordPress, JavaScript, Python, and Django  to deliver high-quality, tailored web solutions. My focus is on creating secure, responsive, and scalable applications that meet your unique needs. With a commitment to clear communication and timely delivery, I ensure that every project exceeds expectations. Let’s work together to bring your ideas to life with a professional and reliable approach.
-                </p>
-                <br>
-                <a id="download" style="width: 60%;    background-size: 400%; padding: 0 2rem;"  target="_blank"  href="./files/boutrhaline-mustapha.pdf" download="boutrhaline-mustapha-cv">
-
-                  <button id="button" > <span id="button-content">download cv</span></button>
-                </a>
-            </div>
-            
-
-            <div class="skills" id="skills">
-              
-            <h2 class="text-center mb-5 fs-4 w-100 text-secondary   font-wheight-light" >Skills</h2>
-
-            <div class="skills-icons  text-center ">
-            
-              <div>
-                <abbr title="react"><i class="fa-brands fa-react fa-4x m-3" style="color: #63E6BE;"></i></abbr>
-
-              <abbr title="php">               <i class="fa-brands fa-php fa-4x m-3" style="color: #870aaa;"></i>
-              </abbr>
-              <abbr title="laravel (10,11)">
-                <i class="fa-brands fa-laravel fa-4x m-3" style="color: red;"></i>
-              </abbr>
-              <abbr title="javascript">
-                <i class="fa-brands fa-js fa-4x m-3" style="color:yellow;"></i>
-
-              </abbr>
-              
-              </div>
-
-             <div>
-              <abbr title="python">
-                <i class="fa-brands fa-python fa-4x m-3" style="color:rgb(18, 75, 234);"></i>
-               </abbr>
-               <abbr title="sql & nosql(mongodb) ">
-                <i class="fa-solid fa-database fa-4x m-3" style="color:rgb(249, 103, 6);"></i>
-  
-               </abbr>
-              <abbr title="bootstrap5">
-                <i class="fa-brands fa-bootstrap fa-4x m-3" style="color:rgb(143, 7, 120);"></i>
-  
-              </abbr>             
-                
-                <abbr title="css3">
-                  <i class="fa-brands fa-css3 fa-4x m-3" style="color:rgb(37, 15, 201);"></i>
-  
-                </abbr>
-             
-               
-             </div>
-             <div>
-              <abbr title="html5">
-                <i class="fa-brands fa-html5 fa-4x m-3" style="color:rgb(219, 99, 7);"></i>
-
-              </abbr>
-              
-              <abbr title="github">
-              <i class="fa-brands fa-github fa-4x m-3"></i>
-
-              </abbr>
-             </div>
-
-            </div>
-                
-         
-            </div>
-
-
-
-
-
-
-
-
-          <div class="cards" id="Projects">
-
-            <h2 class="text-center mb-5 fs-4 w-100 text-secondary  font-italic font-wheight-light" >projects</h2>
-                
-                <div class="card card1 "  data-toggle="modal" data-target="#dotasks" >
-                    <div class="cardHead">
-                        <p class="Title"> do tasks</p>
-                        <div class="language">
-                          <i class="fa-brands fa-python fa-xl" style="color: aquamarine;"></i>
-                          <i class="fa-brands fa-js fa-xl" style="color: yellow;"></i>
-                          <img src="https://static.djangoproject.com/img/logos/django-logo-negative.svg" >                         
-
-                        </div>
-                    </div>
-                    <div class="cardBody">
-                        <p>Discover DO-TASKS, my Django and JavaScript-powered Todo List app, tailor-made for group collaboration. Witness directors effortlessly assigning tasks, tracking progress, and fostering communication. Real-time updates, task categorization, and user profiles optimize teamwork.</p>
-                    </div>
-                    <div class="cardFooter">
-                      <div>
-                       <i class="fa-solid fa-eye fa-lg"></i>
-                      </div>
-                       <div>
-                       <a class="myLink" href="https://github.com/"> <i class="fa fa-brands fa-github fa-xl"></i></a>
-                       <a class="myLink"  href="app/com"><i class="fa-solid fa-globe fa-lg fa-bounce"></i></a>                       
-                      </div>
-
-                    </div>
-                </div>
-                <div class="card card2"  data-toggle="modal" data-target="#noteapp" >
-                    <div class="cardHead">
-                        <p class="Title"> NoteCraft</p>
-                        <div class="language">
-                          <i class="fa-brands fa-react fa-2xl" style="color: rgb(0, 98, 255) ;"></i>
-                          <i class="fa-brands fa-php fa-2xl" style="color: rgb(167, 87, 242) ;"></i>
-
-                        </div>
-                    </div>
-                    <div class="cardBody">
-                        <p> Explore NoteCraft, a sleek note-taking application designed to elevate your organization and creativity. Unleash the power of intuitive note management, rich formatting, and seamless synchronization across devices. NoteCraft transforms the way you capture and organize your thoughts.</p>
-                    </div>
-                    <div class="cardFooter">
-                      <div>
-                        <i class="fa-solid fa-eye fa-lg"></i>
-                       </div>
-                         <div>
-                          <a class="myLink" href="https://github.com/"> <i class="fa fa-brands fa-github fa-xl"></i></a>
-                          <a class="myLink"   href="app/com"><i class="fa-solid fa-globe fa-lg "></i></a>                       
-                        
-                         </div>
-
-                    </div>
-                </div>
-                <div class="card card3 "  data-toggle="modal" data-target="#globalchat" >
-                    <div class="cardHead">
-                        <p class="Title">global chat</p>
-                       <div class="language">
-                        <i class="fa-brands fa-php fa-2xl" style="color: rgb(167, 87, 242) ;"></i>
-                        <i class="fa-brands fa-laravel fa-2xl" style="color: red;"></i>
-                       </div>
-                    </div>
-                    <div class="cardBody">
-                        <p> Immerse yourself in the GlobalChat experience, a social media platform that transcends borders. Connect with a global community, share moments, and engage in real-time conversations. With a user-friendly design, GlobalChat redefines the way we connect and communicate across the world.</p>
-                    </div>
-                    <div class="cardFooter">
-                      <div>
-                        <i class="fa-solid fa-eye fa-lg"></i>
-
-                      </div>
-                         <div>
-                          <a class="myLink" href="#"> <i class="fa fa-brands fa-github fa-xl"></i></a>
-                          <a href="app/com"><i class="fa-solid fa-globe fa-lg fa-bounce"></i></a>                       
-                        </div>
-                        
-
-                    </div>
-                </div>
-                <div class="card card4  " data-toggle="modal" data-target="#wheater"  >
-                    <div class="cardHead">
-                        <p class="Title">WeatherWise</p>
-                        <div class="language">
-                          <i class="fa-brands fa-react fa-xl"></i>
-                          <i class="fa-brands fa-js fa-xl" style="color: yellow;"></i>
-                          <i class="fa-brands fa-css3 fa-xl"></i>
-                         </div>
-                    </div>
-                    <div class="cardBody">
-                        <p>Unveil WeatherWise, a meticulously crafted weather application that merges elegance with functionality. Seamlessly retrieve real-time weather updates, forecasts, and engage with an intuitive interface designed to keep you informed and stylishly connected to the elements.</p>
-                    </div>
-                    <div class="cardFooter">
-
-                      <div>
-                        <i class="fa-solid fa-eye fa-lg"></i>
-
-                      </div>
-
-                         <div>
-                          <a class="myLink" href="#"> <i class="fa fa-brands fa-github fa-xl"></i></a>
-                          <a href="app/com"><i class="fa-solid fa-globe fa-lg "></i></a>                       
-                        </div>
-                    </div>
-                </div>
-
-                
-             
-            </div>
-           
-        </div>
-        <!-- INFO END -->
-</section>
-
-
-
-
-        <!--Modals-->
-        <div class="modal fade " id="dotasks" tabindex="-1" aria-labelledby="dotasks" aria-hidden="true" >
-            <div class="modal-dialog modal-xl modal-dialog-centered   ">
-              <div class="modal-content  text-dark" >
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">TODO APP</h5>
-                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body " >
-                  <div class="container-fluid p-0  ">
-                    <img class="w-100 h-100  rounded-0 "  src="./files/Pimgs/DO TASKS.png" alt="">
-                    </div>
-
-                </div>
- 
-                </div>
-               
-              </div>
-            </div>
-            
+        <!-- CV button: keep BoutrhalineMustapha.pdf in the SAME folder as this index.html -->
+        <div class="cta reveal">
+          <a class="btn btn-primary" href="files/BoutrhalineMustapha.pdf" download="Mustapha-Boutrhaline-CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download CV</a>
+          <a class="btn btn-ghost" href="#contact">Contact me<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
 
+        <div class="stats reveal">
+          <div class="stat"><b>+2</b><small>Years of<br>experience</small></div>
+          <div class="stat"><b>+13</b><small>Technologies<br>mastered</small></div>
+          <div class="stat"><b>3</b><small>Languages<br>spoken</small></div>
+        </div>
 
+        <div class="feature-cards reveal">
+          <a class="fcard orange" href="#services">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V3"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="13" r="1.2" fill="currentColor"/><circle cx="15" cy="13" r="1.2" fill="currentColor"/><path d="M2 12v3M22 12v3"/></svg>
+            <h3>AI Chatbots &amp; n8n Automation</h3>
+            <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="fcard lime" href="#projects">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6"/><path d="m16 6 6 6-6 6"/><path d="m14 4-4 16"/></svg>
+            <h3>React, Laravel, Django, Tailwind</h3>
+            <span class="arrow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </section>
 
-          <div class="modal fade " id="noteapp" tabindex="-1" aria-labelledby="noteapp" aria-hidden="true" >
-            <div class="modal-dialog modal-xl modal-dialog-centered   ">
-              <div class="modal-content  text-dark" >
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">noteapp </h5>
-                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body " >
+      <!-- PROJECTS -->
+      <section id="projects">
+        <h2 class="sec-title reveal">Recent<span>Projects</span></h2>
 
-                  <div class="container-fluid p-0 ">
-                    <h1 class="p-3 text-primary">empty for now ... </h1>
-                    </div>
+        <a class="project reveal" href="https://einsteinairservices.com/" target="_blank" rel="noopener">
+          <div class="thumb" style="background:#1d2b4a">
+            <svg viewBox="0 0 100 100"><rect x="12" y="18" width="64" height="50" rx="6" fill="#fff"/><rect x="12" y="18" width="64" height="9" rx="6" fill="#f46c38"/><circle cx="18" cy="22.5" r="1.6" fill="#fff"/><circle cx="23" cy="22.5" r="1.6" fill="#fff"/><rect x="19" y="33" width="30" height="5" rx="2" fill="#1d2b4a"/><rect x="19" y="42" width="22" height="3" rx="1.5" fill="#9aa4b8"/><path d="M20 61l9-7 7 4 10-10" fill="none" stroke="#c6f432" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="52" y="46" width="38" height="24" rx="8" fill="#c6f432"/><path d="M60 70l-2 9 9-9z" fill="#c6f432"/><circle cx="62" cy="58" r="2.4" fill="#1d2b4a"/><circle cx="71" cy="58" r="2.4" fill="#1d2b4a"/><circle cx="80" cy="58" r="2.4" fill="#1d2b4a"/></svg>
+          </div>
+          <div>
+            <span class="kicker">Client · Jacksonville, FL (USA) · Ongoing</span>
+            <h3>Einstein Air Services — Website, AI Chatbot &amp; SEO</h3>
+            <p>Einstein Air Services is an HVAC company serving Jacksonville and Duval County. I work on developing and maintaining their website — service and service-area pages, online booking and free-estimate flows, and the blog — and on an AI chatbot that answers customer questions around the clock. I also lead the SEO work: technical fixes, local SEO for Jacksonville searches, on-page optimization and content, to bring in more organic leads.</p>
+            <div class="chips"><span class="chip">Web Development</span><span class="chip">AI Chatbot</span><span class="chip">Local SEO</span><span class="chip">Technical SEO</span><span class="chip">Content</span></div>
+          </div>
+          <span class="go"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+        </a>
 
-                </div>
- 
-                </div>
-               
-              </div>
+        <div class="project reveal">
+          <div class="thumb" style="background:#f46c38">
+            <svg viewBox="0 0 100 100"><g stroke="#0b0b0b" stroke-width="2.5" fill="none"><path d="M29 30h14"/><path d="M57 30c8 0 8 20 14 20"/><path d="M57 30c8 0 8 0 14 0" opacity="0"/><path d="M29 70h14"/><path d="M57 70c8 0 8-20 14-20"/></g><rect x="9" y="22" width="20" height="16" rx="4" fill="#fff"/><rect x="43" y="22" width="14" height="16" rx="4" fill="#0b0b0b"/><rect x="9" y="62" width="20" height="16" rx="4" fill="#fff"/><rect x="43" y="62" width="14" height="16" rx="4" fill="#0b0b0b"/><rect x="71" y="40" width="20" height="20" rx="5" fill="#c6f432"/><circle cx="50" cy="30" r="3" fill="#c6f432"/><circle cx="50" cy="70" r="3" fill="#fff"/><path d="M76 50l3 3 6-6" fill="none" stroke="#0b0b0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 30h10M14 70h10" stroke="#f46c38" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <span class="kicker">Automation · n8n</span>
+            <h3>AI-Powered SEO Blogging Workflow</h3>
+            <p>An n8n workflow that turns SEO blogging into a repeatable pipeline: it picks target keywords and topics, drafts structured articles with AI, optimizes titles, meta descriptions and headings, then publishes on a regular schedule. It saves hours of manual work per article and keeps the content calendar consistent.</p>
+            <div class="chips"><span class="chip">n8n</span><span class="chip">AI APIs</span><span class="chip">Content SEO</span><span class="chip">Workflow Automation</span></div>
+          </div>
+        </div>
+
+        <div class="project reveal">
+          <div class="thumb" style="background:#c6f432">
+            <svg viewBox="0 0 100 100"><rect x="12" y="20" width="76" height="60" rx="6" fill="#1f7a3a"/><g fill="none" stroke="#fff" stroke-width="2"><rect x="17" y="25" width="66" height="50" rx="2"/><path d="M50 25v50"/><circle cx="50" cy="50" r="9"/><rect x="17" y="38" width="10" height="24"/><rect x="73" y="38" width="10" height="24"/></g><circle cx="50" cy="50" r="2" fill="#fff"/><rect x="58" y="10" width="34" height="20" rx="6" fill="#0b0b0b"/><path d="M66 20l4 4 8-8" fill="none" stroke="#c6f432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 30l-2 6 7-6z" fill="#0b0b0b"/><circle cx="36" cy="62" r="4" fill="#f46c38" stroke="#0b0b0b" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <span class="kicker">Final-year project (PFE) · Laravel</span>
+            <h3>SportClub — Sports Pitch Booking Platform</h3>
+            <p>A full-stack Laravel platform that connects players with sports pitches. Users browse available pitches and book a time slot online. Pitch owners contact the admin to list their pitches, and the admin reviews and publishes them. Every user has a profile, and a built-in community blog lets players publish posts and share with others. Three roles — player, pitch owner and admin — each with their own access and dashboard.</p>
+            <div class="chips"><span class="chip">Laravel</span><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Blade</span><span class="chip">Booking System</span><span class="chip">Auth &amp; Roles</span><span class="chip">Blog</span></div>
+            <!-- SportClub links: paste the URL inside href="" — the button turns on automatically.
+                 Leave it empty and it shows "Coming soon". -->
+            <div class="proj-links">
+              <a class="proj-link" data-soon href="" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>Live demo</span>
+              </a>
+              <a class="proj-link" data-soon href="" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                <span>GitHub</span>
+              </a>
             </div>
           </div>
-          <div class="modal fade " id="globalchat" tabindex="-1" aria-labelledby="globalchat" aria-hidden="true" >
-            <div class="modal-dialog modal-xl modal-dialog-centered   ">
-              <div class="modal-content  text-dark" >
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">globalchat </h5>
-                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body " >
+        </div>
+      </section>
 
-                  <div class="container-fluid p-0 ">
-                    <h1 class="p-3 text-primary">empty for now ... </h1>
-                    </div>
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <h2 class="sec-title reveal">Experience<span>&amp; Education</span></h2>
 
-                </div>
- 
-                </div>
-               
-              </div>
-            </div>
+        <div class="exp reveal">
+          <div class="exp-head">
+            <div><h3>Freelance</h3><div class="role">Web Developer · Khemisset / Remote</div></div>
+            <span class="date">Jun 2024 – Present</span>
           </div>
-          <div class="modal fade " id="wheater" tabindex="-1" aria-labelledby="wheater" aria-hidden="true" >
-            <div class="modal-dialog modal-xl modal-dialog-centered   ">
-              <div class="modal-content  text-dark" >
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">wheater </h5>
-                  <button type="button" class="close text-dark" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body " >
+          <ul>
+            <li>Developing the website of <a class="inline" href="https://einsteinairservices.com/" target="_blank" rel="noopener">Einstein Air Services</a>, an HVAC company in Jacksonville (USA): SEO optimization and an AI chatbot for customer support.</li>
+            <li>Designed intelligent agents to automate order handling and customer relationship management.</li>
+            <li>Build n8n automation workflows, including an AI-assisted pipeline for SEO blog content.</li>
+          </ul>
+        </div>
 
-                  <div class="container-fluid p-0 ">
-                    <h1 class="p-3 text-primary">empty for now ... </h1>
-                    </div>
+        <div class="sub-label reveal">Education</div>
 
-                </div>
- 
-                </div>
-               
-              </div>
-            </div>
+        <div class="exp reveal">
+          <div class="exp-head">
+            <div><h3>OFPPT — ISTA Khemisset</h3><div class="role">Specialized Technician, Digital Development — Full Stack Web</div></div>
+            <span class="date">2022 – 2024</span>
           </div>
+        </div>
 
-        <!--Modals END-->
+        <div class="exp reveal">
+          <div class="exp-head">
+            <div><h3>Lycée El Fath, Khemisset</h3><div class="role">Baccalaureate in Physical Sciences</div></div>
+            <span class="date">2021 – 2022</span>
+          </div>
+        </div>
 
-          
+        <div class="sub-label reveal">Languages</div>
+        <div class="langs reveal">
+          <div class="lang"><b>Arabic</b><small>Fluent</small><div class="bar"><i></i></div></div>
+          <div class="lang"><b>French</b><small>Fluent</small><div class="bar"><i></i></div></div>
+          <div class="lang"><b>English</b><small>Fluent</small><div class="bar"><i></i></div></div>
+        </div>
+      </section>
 
-       <a  id="up"> <i class="fa-solid fa-circle-arrow-up fa-2x   " style="color: #ed8f8f; border:none;"></i></a> 
+      <!-- TOOLS -->
+      <section id="tools">
+        <h2 class="sec-title reveal">Tech<span>Stack</span></h2>
+        <div class="tools reveal">
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="React"></div><div><b>React.js</b><small>Front-end library</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="JavaScript"></div><div><b>JavaScript</b><small>HTML5 · CSS3 · ES6+</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="Laravel"></div><div><b>Laravel</b><small>PHP framework</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="Django"></div><div><b>Django</b><small>Python framework</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="Tailwind CSS"></div><div><b>Tailwind / Bootstrap</b><small>CSS frameworks</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="MySQL"></div><div><b>MySQL / SQLite</b><small>Databases</small></div></div>
+          <div class="tool"><div class="logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" onerror="this.outerHTML='<span class=&quot;fallback&quot;>'+this.alt.slice(0,2).toUpperCase()+'</span>'" alt="Git"></div><div><b>Git / GitHub</b><small>Version control</small></div></div>
+          <div class="tool"><div class="logo"><span class="fallback">API</span></div><div><b>REST &amp; AI APIs</b><small>Integrations &amp; chatbots</small></div></div>
+          <div class="tool"><div class="logo" style="background:#ea4b71"><span class="fallback" style="color:#fff">n8n</span></div><div><b>n8n</b><small>Workflow automation</small></div></div>
+          <div class="tool"><div class="logo"><span class="fallback">SEO</span></div><div><b>Technical SEO</b><small>Audits · on-page · content</small></div></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h2 class="sec-title reveal">What<span>I Do</span></h2>
+        <div class="services reveal">
+          <div class="service"><span class="num">01</span><h3>Web Applications</h3><p>Full stack apps with React on the front and Laravel or Django behind a clean REST API.</p></div>
+          <div class="service"><span class="num">02</span><h3>AI Chatbots &amp; Agents</h3><p>Support chatbots and automation agents that handle orders and customer requests.</p></div>
+          <div class="service"><span class="num">03</span><h3>Workflow Automation</h3><p>n8n workflows that connect your tools and remove repetitive work — from lead handling to automated SEO blogging.</p></div>
+          <div class="service"><span class="num">04</span><h3>SEO &amp; Content</h3><p>Technical audits, on-page optimization and content strategy for fast, search-friendly websites that get found and convert.</p></div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2 class="sec-title reveal">Let's Work<span>Together</span></h2>
+        <form id="contactForm" class="reveal" action="https://formspree.io/f/xyekdvvw" method="POST">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" placeholder="Your name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@email.com" required></div>
+          <div class="field full">
+            <label for="reason">Reason for contact</label>
+            <select id="reason" name="reason" required>
+              <option value="" disabled selected>Select…</option>
+              <option>Job opportunity</option>
+              <option>Internship</option>
+              <option>Freelance project</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field full"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me about the role or project…" required></textarea></div>
+          <!-- spam trap: real visitors never see or fill this field -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+          <button type="submit">Send message</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <div class="direct reveal">
+          <a href="BoutrhalineMustapha.pdf" download="Mustapha-Boutrhaline-CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Download CV</a>
+          <a href="mailto:mustapha8contact@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>mustapha8contact@gmail.com</a>
+          <a href="tel:+212623593057"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2Z"/></svg>+212 623 593 057</a>
+          <a href="https://wa.me/212623593057" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>WhatsApp</a>
+          <a href="https://www.linkedin.com/in/mostapha-web-developer" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>LinkedIn</a>
+          <a href="https://github.com/mostaphabr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>GitHub</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>© <span id="year">2026</span> Mustapha Boutrhaline · Full Stack Developer · Khemisset, Morocco</footer>
 
 
-          
-    
-    
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>    
-   
-    <script src="./files/script.js"></script>
 </body>
+
+<script src="files/script.min.js"></script>
 </html>

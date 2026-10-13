@@ -1,174 +1,67 @@
-
-const sentence = "Welcome to my Portfolio";
-const outputElement = document.getElementById("output");
-let index = 0;
-
-function writeLetterByLetter() {
-  if (index < sentence.length) {
-    outputElement.textContent += sentence.charAt(index);
-    index++;
-    setTimeout(writeLetterByLetter, 130);
+// Project buttons without a link yet show "Coming soon"
+document.querySelectorAll('a[data-soon]').forEach(a => {
+  if (!a.getAttribute('href').trim()) {
+    a.removeAttribute('href'); a.removeAttribute('target');
+    a.classList.add('soon'); a.setAttribute('aria-disabled', 'true');
+    a.insertAdjacentHTML('beforeend', '<em>Coming soon</em>');
   }
- else {
-    setTimeout(() => {
-        outputElement.textContent = "";
-       
-      index = 0;
-      writeLetterByLetter();
-    }, 2000); 
-}}
-
-writeLetterByLetter();
-
-let about = document.getElementById('about')
-let Description = document.getElementById('Description')
-about.addEventListener('click' ,()=>{
-    Description.scrollIntoView({
-        block : "center" , 
-        behavior :"smooth"
-       })     
-  
-  
-  
-})
-
-function popup(para){ 
-    let target =  document.getElementById(`${para}`)
-    if (target) {
-        document.getElementById(`${para}`).classList.add('popup')
-    }
-    else{
-        document.querySelector(`.${para}`).classList.add('popup')
-
-    }
-    
-}
-
-function popupend(para){
-    let target =  document.getElementById(`${para}`)
-    if (target) {
-        document.getElementById(`${para}`).classList.remove('popup')
-    }
-    else{
-        document.querySelector(`.${para}`).classList.remove('popup')
-
-    }
-    }    
-
-// (cards Hover)
-document.getElementById('Projects').addEventListener('click' ,hover )
-let i = 1
-function hover(){
-    if(i <= 4)
-    {
-        card_position(i)
-        document.querySelector(`.card${i}`).classList.add('popup')
-        if (i >1 ) {
-        document.querySelector(`.card${i-1}`).classList.remove('popup')
-        }
-        if(i==1){
-        document.querySelector(`.card4`).classList.remove('popup')
-            
-        }
-        i++
-    }else{
-        i = 1
-        hover()
-    }
-
-}
-let skillslink =document.getElementById('skillslink')
-skillslink.addEventListener('click' , ()=>{document.getElementById('skills').scrollIntoView({block :'center' , behavior :'smooth'})} )
-
-// END  (cards Hover)
-
-colors = ['gold' , 'aqua' ,  , 'orange' , 'rgb(00, 173, 235)' ]
-let c = 0
-document.querySelectorAll('.Title').forEach(
-    element=>
-    {
-         ;element.style.color = colors[i] ; i++
-    }) 
-
-
-
-function card_position(c){
-    document.querySelector(`.card${c}`).scrollIntoView({
-      
-        block : "center" , behavior : "smooth"
-            })
-   
-    
-  
-}
-// Responsive NAV
-let icon = document.getElementById('navicon')
-document.getElementById('navicon').addEventListener('click' ,()=>{
-    document.querySelector('.navlinks').classList.toggle('shown')
-   
-
-    if(icon.classList.contains('fa-xmark')){
-        icon.classList.remove('fa-xmark')
-        icon.classList.add('fa-bars-staggered')
-    }else{
-        icon.classList.add('fa-xmark')
-        icon.classList.remove('fa-bars-staggered')
-    }
-
-})
-
-document.getElementById('up').addEventListener("click" , ()=>{window.scrollTo({ top : 0 , behavior : "smooth"})} ); 
-document.querySelectorAll('.link').forEach((element)=>{
-    element.addEventListener('click' , ()=>{
-       
-        document.querySelector('.navlinks').classList.remove('shown')
-        icon.classList.remove('fa-xmark')
-        icon.classList.add('fa-bars-staggered')
-
-
-
-
-    })
-})
-
-
-// Prevent triggering the modal
-
-document.querySelectorAll(".myLink").forEach(element => {
-   element.addEventListener("click", function(event) {
-        event.stopPropagation();  
-      });
 });
 
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Prevent triggering the modal
+// Fallback if a tool logo fails to load
+document.querySelectorAll('.tool .logo img').forEach(img => {
+  img.addEventListener('error', () => {
+    const s = document.createElement('span');
+    s.className = 'fallback';
+    s.textContent = img.alt.slice(0, 2).toUpperCase();
+    img.replaceWith(s);
+  });
+});
 
+// Reveal on scroll
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-
-function stars() {
-    let e = document.createElement("div");
-    let size = Math.random() * 12;
-    let duration = Math.random() * 3;
-  
-    e.setAttribute("class", "star");
-    document.body.appendChild(e);
-    
-    if (screen.width >= 1000) {
-        e.style.left = Math.random() * (innerWidth-100) + "px";
- 
-    }else{
-        e.style.left = Math.random() * (innerWidth - 40 )   + "px";
-
+// Active nav link on scroll
+const links = document.querySelectorAll('.nav a');
+const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
+const navIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
     }
-    e.style.fontSize = 12 + size + "px";
-    e.style.animationDuration = 4 + duration + "s";
-  
-    setTimeout(function () {
-      document.body.removeChild(e);
-    }, 5000);
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+sections.forEach(s => s && navIO.observe(s));
+
+// Contact form: sends messages to your inbox through Formspree (no page reload)
+const form = document.getElementById('contactForm');
+const statusEl = document.getElementById('formStatus');
+const btn = form.querySelector('button[type="submit"]');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  data.set('_subject', (data.get('reason') || 'Message') + ' — from ' + (data.get('name') || 'a visitor') + ' (portfolio)');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  statusEl.className = 'form-status'; statusEl.textContent = '';
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+    if (res.ok) {
+      form.reset();
+      statusEl.className = 'form-status ok';
+      statusEl.textContent = 'Thanks! Your message has been sent — I’ll get back to you soon.';
+    } else {
+      const json = await res.json().catch(() => ({}));
+      throw new Error(json.errors ? json.errors.map(x => x.message).join(', ') : 'Request failed');
+    }
+  } catch (err) {
+    statusEl.className = 'form-status err';
+    statusEl.innerHTML = 'Sorry, the message couldn’t be sent. Please email me directly at <a href="mailto:mustapha8contact@gmail.com">mustapha8contact@gmail.com</a>.';
+  } finally {
+    btn.disabled = false; btn.textContent = 'Send message';
   }
-  
-  setInterval(function () {
-    stars();
-  }, 130);
-  
+});
