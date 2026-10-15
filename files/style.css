@@ -35,7 +35,7 @@
   --card-pill-text: #444444;
   --card-social-hover: #c94b1a;
   --card-shadow: none;
-  --photo-dash: rgba(255, 255, 255, 0.55);
+  --photo-dash: rgba(11, 11, 11, 0.3);
   --radius: 20px;
   --max: 1160px;
 }
@@ -71,7 +71,6 @@
   --card-pill-text: #444444;
   --card-social-hover: #c94b1a;
   --card-shadow: 0 0 0 1px #e2dfd8, 0 24px 48px -24px rgba(11, 11, 11, 0.22);
-  --photo-dash: rgba(11, 11, 11, 0.3);
 }
 * {
   box-sizing: border-box;
@@ -960,8 +959,7 @@ footer {
   .nav {
     top: 12px;
   }
-  .nav a,
-  .theme-toggle {
+  .nav a {
     width: 40px;
     height: 40px;
   }
@@ -1166,35 +1164,46 @@ footer {
    LIGHT / DARK MODE
    ========================================================= */
 
-/* ---- toggle button in the nav ---- */
-.nav-sep {
-  width: 1px;
-  margin: 8px 2px;
-  background: var(--border);
-}
+/* ---- theme switch: notch hanging from the top-right corner ---- */
 .theme-toggle {
-  position: relative;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
+  position: fixed;
+  top: 0;
+  right: 28px;
+  z-index: 101;
+  width: 60px;
+  height: 48px;
   padding: 0;
-  border: 0;
-  border-radius: 12px;
-  background: transparent;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: var(--muted);
   font: inherit;
   cursor: pointer;
-  transition: background 0.25s, color 0.25s;
+  transition: height 0.35s var(--ease-out), color 0.25s;
+  animation: notchIn 0.8s var(--ease-out) 0.6s backwards;
 }
+/* pulls down a little on hover, like tugging a cord */
 .theme-toggle:hover {
-  background: var(--nav-active);
+  height: 56px;
   color: var(--text);
 }
+.theme-toggle::after {
+  top: calc(100% + 8px);
+}
+@keyframes notchIn {
+  from { transform: translateY(-100%); }
+}
+/* the icon sits near the bottom edge, so it moves down with the pull */
 .theme-toggle svg {
-  grid-area: 1 / 1;
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
   width: 20px;
   height: 20px;
+  margin-left: -10px;
   transition: transform 0.5s var(--ease-out), opacity 0.3s;
 }
 .theme-toggle .i-moon,
@@ -1211,24 +1220,32 @@ footer {
   outline: 2px solid var(--orange);
   outline-offset: 2px;
 }
+/* phones: the nav moves to the left so it never runs into the notch */
+@media (max-width: 480px) {
+  .nav {
+    left: 12px;
+    transform: none;
+  }
+  .theme-toggle {
+    right: 12px;
+    width: 50px;
+    height: 46px;
+  }
+  .theme-toggle:hover {
+    height: 46px;
+  }
+}
 @media (max-width: 380px) {
   .nav {
     gap: 2px;
   }
-  .nav a,
-  .theme-toggle {
+  .nav a {
     width: 36px;
     height: 36px;
   }
-}
-
-/* ---- one photo per theme ---- */
-.photo-light,
-:root[data-theme="light"] .photo-dark {
-  display: none;
-}
-:root[data-theme="light"] .photo-light {
-  display: block;
+  .theme-toggle {
+    width: 44px;
+  }
 }
 
 /* ---- switching animation ----

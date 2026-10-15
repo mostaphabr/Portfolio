@@ -121,12 +121,6 @@ themeToggle.addEventListener('click', () => {
   const b = themeToggle.getBoundingClientRect();
   switchTheme(next, b.left + b.width / 2, b.top + b.height / 2);
 });
-// start loading the other photo as soon as someone reaches for the toggle
-const preloadOtherPhoto = () => {
-  const other = document.querySelector(isLight() ? '.photo-dark' : '.photo-light');
-  if (other) other.loading = 'eager';
-};
-['pointerenter', 'focus', 'touchstart'].forEach(ev => themeToggle.addEventListener(ev, preloadOtherPhoto, { passive: true }));
 // keep following the system setting until the visitor picks a theme themselves
 window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
   let saved = null;
