@@ -1164,46 +1164,25 @@ footer {
    LIGHT / DARK MODE
    ========================================================= */
 
-/* ---- theme switch: notch hanging from the top-right corner ---- */
+/* ---- theme switch ----
+   Desktop (mouse): a notch hanging from the top-right corner.
+   Phones and touch screens: a button at the end of the nav. */
 .theme-toggle {
-  position: fixed;
-  top: 0;
-  right: 28px;
-  z-index: 101;
-  width: 60px;
-  height: 48px;
+  position: relative;
   padding: 0;
-  border: 1px solid var(--border);
-  border-top: 0;
-  border-radius: 0 0 18px 18px;
-  background: var(--nav-bg);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  border: 0;
+  background: transparent;
   color: var(--muted);
   font: inherit;
   cursor: pointer;
-  transition: height 0.35s var(--ease-out), color 0.25s;
-  animation: notchIn 0.8s var(--ease-out) 0.6s backwards;
 }
-/* pulls down a little on hover, like tugging a cord */
-.theme-toggle:hover {
-  height: 56px;
-  color: var(--text);
-}
-.theme-toggle::after {
-  top: calc(100% + 8px);
-}
-@keyframes notchIn {
-  from { transform: translateY(-100%); }
-}
-/* the icon sits near the bottom edge, so it moves down with the pull */
 .theme-toggle svg {
   position: absolute;
-  bottom: 13px;
+  top: 50%;
   left: 50%;
   width: 20px;
   height: 20px;
-  margin-left: -10px;
+  margin: -10px 0 0 -10px;
   transition: transform 0.5s var(--ease-out), opacity 0.3s;
 }
 .theme-toggle .i-moon,
@@ -1220,31 +1199,88 @@ footer {
   outline: 2px solid var(--orange);
   outline-offset: 2px;
 }
-/* phones: the nav moves to the left so it never runs into the notch */
-@media (max-width: 480px) {
-  .nav {
-    left: 12px;
-    transform: none;
+
+/* desktop: the notch */
+.theme-toggle.notch {
+  position: fixed;
+  top: 0;
+  right: 28px;
+  z-index: 101;
+  width: 60px;
+  height: 48px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: height 0.35s var(--ease-out), color 0.25s;
+  animation: notchIn 0.8s var(--ease-out) 0.6s backwards;
+}
+/* the icon sits near the bottom edge, so it moves down with the pull */
+.theme-toggle.notch svg {
+  top: auto;
+  bottom: 13px;
+  margin-top: 0;
+}
+/* pulls down a little on hover, like tugging a cord */
+.theme-toggle.notch:hover {
+  height: 56px;
+  color: var(--text);
+}
+.theme-toggle.notch::after {
+  top: calc(100% + 8px);
+}
+@keyframes notchIn {
+  from { transform: translateY(-100%); }
+}
+
+/* phones: inside the nav, after a thin divider */
+.nav-sep,
+.theme-toggle.in-nav {
+  display: none;
+}
+.theme-toggle.in-nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  transition: background 0.25s, color 0.25s;
+}
+.theme-toggle.in-nav:hover {
+  background: var(--nav-active);
+  color: var(--text);
+}
+@media (max-width: 480px), (hover: none) {
+  .theme-toggle.notch {
+    display: none;
   }
-  .theme-toggle {
-    right: 12px;
-    width: 50px;
-    height: 46px;
+  .nav-sep {
+    display: block;
+    width: 1px;
+    margin: 8px 2px;
+    background: var(--border);
   }
-  .theme-toggle:hover {
-    height: 46px;
+  .theme-toggle.in-nav {
+    display: block;
+  }
+}
+@media (max-width: 640px) {
+  .theme-toggle.in-nav {
+    width: 40px;
+    height: 40px;
   }
 }
 @media (max-width: 380px) {
   .nav {
     gap: 2px;
   }
-  .nav a {
+  .nav a,
+  .theme-toggle.in-nav {
     width: 36px;
     height: 36px;
   }
-  .theme-toggle {
-    width: 44px;
+  .nav-sep {
+    margin: 8px 1px;
   }
 }
 

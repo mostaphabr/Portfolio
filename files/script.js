@@ -82,13 +82,15 @@ if (canHover) {
 // Light / dark mode
 // (the starting theme is set by the small script in <head> so the page never flashes)
 const root = document.documentElement;
-const themeToggle = document.querySelector('.theme-toggle');
+const themeToggles = document.querySelectorAll('.theme-toggle'); // notch (desktop) + nav button (phones)
 const themeMeta = document.querySelector('meta[name="theme-color"]');
 const isLight = () => root.getAttribute('data-theme') === 'light';
 function syncThemeUI() {
   const next = isLight() ? 'Dark mode' : 'Light mode';
-  themeToggle.dataset.label = next;
-  themeToggle.setAttribute('aria-label', 'Switch to ' + next.toLowerCase());
+  themeToggles.forEach(btn => {
+    btn.dataset.label = next;
+    btn.setAttribute('aria-label', 'Switch to ' + next.toLowerCase());
+  });
   if (themeMeta) themeMeta.setAttribute('content', isLight() ? '#f3f2ee' : '#0b0b0b');
 }
 function applyTheme(theme) {
@@ -115,12 +117,12 @@ function switchTheme(theme, x, y) {
   }).catch(() => {});
 }
 syncThemeUI();
-themeToggle.addEventListener('click', () => {
+themeToggles.forEach(btn => btn.addEventListener('click', () => {
   const next = isLight() ? 'dark' : 'light';
   try { localStorage.setItem('theme', next); } catch (err) {}
-  const b = themeToggle.getBoundingClientRect();
+  const b = btn.getBoundingClientRect();
   switchTheme(next, b.left + b.width / 2, b.top + b.height / 2);
-});
+}));
 // keep following the system setting until the visitor picks a theme themselves
 window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
   let saved = null;
